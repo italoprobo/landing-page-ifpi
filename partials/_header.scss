@@ -10,7 +10,7 @@ header{
     justify-content: space-between;
 }
 
-i{
+i.fa-brands{
     color: $white-normal;
 }
 
@@ -22,7 +22,7 @@ i{
 .header-icons a:hover{
     i{
         animation: translateY 0.8s infinite alternate;
-        color: $red-ligth;
+        color: $blue-normal;
     }
 }
 
@@ -44,8 +44,8 @@ i{
 }
 
 .header-button:hover {
-    border: 1px solid $red-ligth;
-    background-color: $red-ligth;
+    border: 1px solid $blue-normal;
+    background-color: $blue-normal;
 }
 
 .header-logo {

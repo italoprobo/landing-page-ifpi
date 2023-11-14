@@ -13,7 +13,7 @@
     content: '';
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/ifpi2.png");
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/fv.png");
     left: 0;
     top: 0;
     width: 100%;
@@ -55,7 +55,7 @@
 .button-contact{
     padding: 14px 28px;
     color: $white-normal;
-    background-color: $red-normal;
+    background-color: $blue-normal;
     border: 0;
     font-size: 18px;
     font-weight: 600;
@@ -248,6 +248,7 @@
     }
 
     .footer-logo{
+        display: flex;
         width: 230px;
         height: 230px;
     }
@@ -260,7 +261,7 @@
 .footer-icons a:hover{
     i{
         animation: translateY 0.8s infinite alternate;
-        color: $red-ligth;
+        color: $blue-normal;
     }
 }
 
@@ -311,9 +312,245 @@
 
 @media screen and (max-width: 768px) {
     .btn-wpp{
+        bottom: 20px;
+        right: 14px;
+
         img{
             max-width: 64px;
         }
     }
     
+}
+
+// FORM
+
+.form{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form {
+    background-color: $black-ligth;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 700px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    background-color: $black-dark;
+    color: $white-normal;
+    padding: 20px;
+
+}
+
+.formc {
+    padding: 20px;
+
+    button{
+        background-color: $blue-normal;
+        border: 2px solid $blue-normal;
+        color: $white-normal;
+        font-size: 14px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    button:hover{
+        background-color: $blue-dark;
+        border: 2px solid $blue-dark;
+    }
+
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+
+    label {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: $white-normal;
+    }
+
+    input {
+        border: 2px solid $black-ligth;
+        display: block;
+        border-radius: 10px;
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    i {
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        visibility: hidden;
+    }
+
+    small {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+    }
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.success i#ch {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i#ex{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+// CARROSEL 
+
+.carrosel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+
+
+    i {
+        color: $white-normal;
+        height: 50px;
+        width: 50px;
+        background-color: $black-normal;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute; 
+        top: 50%;    
+        font-size: 1.25rem;
+        transform: translateY(-50%);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    }
+}
+
+.wrapper i:first-child {
+    left: -55px;
+}
+
+.wrapper i:last-child {
+    right: -55px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel .card {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-normal;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+
+    .info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        background-color: $white-normal;
+        z-index: 99;
+    }
+}
+
+.card .img img {
+    width: 100%;
+    height: 25vh;
+    max-width: 360px;
+
+    transition: transform 0.2s;
+}
+
+.card .img {
+    width: 100%;
+    background-size: cover;
+}
+
+.card .img img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 20px);
+    }
+
+    .card h2 {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc(100%);
+    }
+
+    .carrosel {
+        width: 100%;
+        max-width: 400px;
+    }
 }
