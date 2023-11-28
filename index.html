@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="index.css"/>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -52,9 +53,40 @@
             <main class="hero container" data-aos="fade-up" data-aos-delay="400">
                 <h1>EDUCAÇÃO: O CAMINHO PARA O CONHECIMENTO E O CRESCIMENTO</h1>
                 <p>Vestibulares abertos!</p>
-                <a href="https://fatepifaespi.com.br/vestibular/" class="button-contact" target="_blank">
+                <a class="button-contact" target="_blank">
                     Fazer inscrição
                 </a>
+                <div class="container-form">
+                    <div class="header">
+                        <h2>Quero me inscrever</h2>
+                        <p class="close-bnt"><i class="bx bx-x"></i></p>
+                    </div>
+    
+                    <form id="formc" class="formc" action="https://api.sheetmonkey.io/form/oPWunBJQkAyXop7VgF2ehN" method="post">
+                        <div class="form-control">
+                            <label for="username">Nome</label>
+                            <input type="text" id="username" name="nome" placeholder="Digite seu nome...">
+                            <i id="ex" class="fas fa-exclamation-circle"></i>
+                            <i id="ch" class="fas fa-check-circle"></i>
+                            <small>Mensagem de erro</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Digite seu email...">
+                            <i id="ex" class="fas fa-exclamation-circle"></i>
+                            <i id="ch" class="fas fa-check-circle"></i>
+                            <small>Mensagem de erro</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone...">
+                            <i id="ex" class="fas fa-exclamation-circle"></i>
+                            <i id="ch" class="fas fa-check-circle"></i>
+                            <small>Mensagem de erro</small>
+                        </div>
+    
+                        <button type="submit">Enviar</button>
+                    </form>
             </main>
 
         </header>
@@ -67,15 +99,20 @@
         <div class="container about-content">
             <div data-aos="zoom-in" data-aos-delay="100">
                 <img 
-                    src="assets/tv_fatepi.png"
+                    src="assets/isr.png"
                     alt="Palestras"
                 />
             </div>
             <div class="about-description"
             data-aos="zoom-out-left" data-aos-delay="250">
                 <h2>SOBRE</h2>
-                <p>A Faculdade de Tecnologia do Piauí FATEPI e a Faculdade de Ensino Superior do Piauí FAESPI é uma instituição de ensino superior localizada no estado do Piauí, Brasil. Fundado com o propósito de oferecer educação de qualidade em diversos níveis de ensino, a FATEPI/FAESPI desempenha um papel fundamental na formação de estudantes e profissionais em várias áreas, incluindo ciência, tecnologia e humanidades. </p>
+                <p>As Faculdades FATEPI e FAESPI, oferecem uma formação de excelência em todos os seus cursos.  Reconhecidas pela inovação e pioneirismos em suas ações, projetos educacionais , metodologias de ensino e atividades extracurriculares avançadas , as Faculdades garantiram, mais uma vez, o reconhecimento como Instituição Socialmente Responsável.
+                    A FATEPI e FAESPI , garantem a maior taxa de empregabilidade dentre todas as Instituições do Estado do Piauí e  a maior taxa de aprovação em concursos públicos.
+                    Com uma metodologia inovadora, uma matriz curricular diferenciada e uma equipe de professores do mais alto nível, as Faculdades FATEPI e Faespi, oferecem a melhor formação  superior do Piauí.
+                    E você pode fazer parte desse grandioso  projeto educacional. Garanta uma formação de qualidade e seja o melhor na sua área, faça parte da Faculdade que forma campeões e profissionais de sucesso.</p>
                 <p>Localização: <strong>R. Primeiro de Maio, 2235</strong> - Primavera, Teresina - PI, <strong>64002-510</strong></p>
+                <p>Telefone: <strong>86 2107-2200</strong></p>
+                <p>Facebook: <strong>fatepifaespi</strong> - Instagram: <strong>@fatepifaespi</strong></p>
             </div>
         </div>
     </section>
@@ -87,7 +124,7 @@
         <div class="services-content container" 
         data-aos="zoom-out-right" data-aos-delay="250">
             <h2>CURSOS</h2>
-            <p>FATEPI/FAESPI oferece uma ampla variedade de cursos de graduação e pós-graduação em diversas áreas do conhecimento, proporcionando oportunidades de aprendizado e desenvolvimento profissional. Os alunos do FATEPI/FAESPI têm a oportunidade de adquirir habilidades e conhecimentos relevantes para o mercado de trabalho, preparando-se para uma carreira de sucesso e contribuindo para o progresso da sociedade.</p>
+            <p>FATEPI/FAESPI oferece uma ampla variedade de cursos de graduação em diversas áreas do conhecimento, proporcionando oportunidades de aprendizado e desenvolvimento profissional. Os alunos do FATEPI/FAESPI têm a oportunidade de adquirir habilidades e conhecimentos relevantes para o mercado de trabalho, preparando-se para uma carreira de sucesso e contribuindo para o progresso da sociedade.</p>
         </div>
 
         <section class="carrosel" data-aos="zoom-out-right" data-aos-delay="300">
@@ -172,7 +209,7 @@
                     <h2>Quero me inscrever</h2>
                 </div>
 
-                <form id="formc" class="formc" action="https://api.sheetmonkey.io/form/c4hLuKxU3bSnkGvVfEBUe1" method="post">
+                <form id="formc" class="formc" action="https://api.sheetmonkey.io/form/oPWunBJQkAyXop7VgF2ehN" method="post">
                     <div class="form-control">
                         <label for="username">Nome</label>
                         <input type="text" id="username" name="nome" placeholder="Digite seu nome...">

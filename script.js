@@ -89,3 +89,15 @@ const infiteScroll = () => {
 }
 
 carrosel.addEventListener("scroll", infiteScroll)
+
+const card_button = document.querySelector('.button-contact')
+const card_container = document.querySelector('.container-form')
+const close_button = document.querySelector('.close-bnt')
+
+card_button.addEventListener('click', function(){
+    card_container.classList.add('active')
+})
+
+close_button.addEventListener('click', function(){
+    card_container.classList.remove('active')
+})

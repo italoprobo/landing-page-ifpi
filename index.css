@@ -364,22 +364,52 @@ i.fa-brands {
 }
 
 .container-form {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 900px;
   background-color: #353436;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 700px;
-  max-width: 100%;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
+.container-form.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s ease;
+  transform: translateY(10%);
+}
+
+@media screen and (max-width: 520px) {
+  .container-form {
+    max-width: 90%;
+    margin-bottom: 10vh;
+  }
+  .container-form i {
+    font-size: large;
+  }
+}
 .header {
-  background-color: #161617;
+  background-color: #EDAF29;
   color: #fff;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h2 {
+  color: #000000;
+}
+
+.close-bnt {
+  cursor: pointer;
+  color: #000000;
 }
 
 .formc {
   padding: 20px;
+  background-color: #DEA03D;
 }
 .formc button {
   background-color: #2b6cb0;
@@ -403,7 +433,7 @@ i.fa-brands {
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
-  color: #fff;
+  color: #000000;
 }
 .form-control input {
   border: 2px solid #353436;
@@ -591,4 +621,8 @@ img {
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+.form {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

@@ -333,23 +333,57 @@
 }
 
 .container-form {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    
+    width: 900px;
+
     background-color: $black-ligth;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 700px;
-    max-width: 100%;
+    box-shadow: 5px 5px 20px -5px rgba(0, 0, 0,.2);
     overflow: hidden;
 }
 
+.container-form.active{
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease;
+    transform: translateY(10%);
+}
+
+@media screen and (max-width:520px) {
+    .container-form{
+        max-width: 90%;
+        margin-bottom: 10vh;
+    
+        i{
+            font-size: large;
+        }
+    }
+}
+
 .header {
-    background-color: $black-dark;
+    background-color: $orange-ligth;
     color: $white-normal;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    h2{
+        color: #000000;
+    }
+}
+
+.close-bnt{
+    cursor: pointer;
+    color: #000000;
 }
 
 .formc {
     padding: 20px;
+    background-color: $orange-normal;
 
     button{
         background-color: $blue-normal;
@@ -376,7 +410,7 @@
     label {
         display: inline-block;
         margin-bottom: 5px;
-        color: $white-normal;
+        color: #000000;
     }
 
     input {
